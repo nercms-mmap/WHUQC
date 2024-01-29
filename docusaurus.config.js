@@ -95,7 +95,7 @@ const config = {
           },
           {to: '/blog', label: 'Slide', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/ZiangTian/WHU-QC-site',
             label: 'Github',
             position: 'right',
           },
