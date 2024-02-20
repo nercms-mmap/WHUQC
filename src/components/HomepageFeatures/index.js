@@ -4,11 +4,11 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: '课程大纲',
+    title: 'Course Information',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        《量子计算》课程大纲
+        《量子计算》课程介绍
       </>
     ),
   },

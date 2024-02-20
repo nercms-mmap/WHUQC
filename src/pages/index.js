@@ -17,11 +17,14 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/classic_quantum">
-            课程说明
-          </Link>
+        <a
+          className="button button--secondary button--lg"
+          href="https://cs.whu.edu.cn/info/1019/2832.htm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          课程教师：梁超
+        </a>
         </div>
       </div>
     </header>
@@ -41,3 +44,4 @@ export default function Home() {
     </Layout>
   );
 }
+
