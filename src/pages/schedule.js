@@ -20,79 +20,6 @@ function ScheduleHeader() {
   );
 }
 
-const scdTable = () => {
-  return (
-    <table className="schedule-table">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Topic</th>
-        <th className="d-none d-lg-table-cell">Resources</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr id="jan-17-2024">
-        <td>Jan 17</td>
-        <td>Lecture 01: Course Overview & Relational Model</td>
-        <td>
-          <Link className="btn btn-success mr-4" to="/docs/classic_quantum">Lecture Notes</Link>
-          <Link className="btn btn-success" to="/docs/blog">Slides</Link>
-        </td>
-      </tr>
-      <tr id="jan-17-2024">
-        <td>Jan 17</td>
-        <td>Lecture 01: Course Overview & Relational Model</td>
-        <td>
-          <Link className="btn btn-success mr-4" to="/docs/classic_quantum">Lecture Notes</Link>
-          <Link className="btn btn-success" to="/docs/blog">Slides</Link>
-        </td>
-      </tr>
-      <tr id="jan-17-2024">
-        <td>Jan 17</td>
-        <td>Lecture 01: Course Overview & Relational Model</td>
-        <td>
-          <Link className="btn btn-success mr-4" to="/docs/classic_quantum">Lecture Notes</Link>
-          <Link className="btn btn-success" to="/docs/blog">Slides</Link>
-        </td>
-      </tr>
-      <tr id="jan-17-2024">
-        <td>Jan 17</td>
-        <td>Lecture 01: Course Overview & Relational Model</td>
-        <td>
-          <Link className="btn btn-success mr-4" to="/docs/classic_quantum">Lecture Notes</Link>
-          <Link className="btn btn-success" to="/docs/blog">Slides</Link>
-        </td>
-      </tr>
-      <tr id="jan-17-2024">
-        <td>Jan 17</td>
-        <td>Lecture 01: Course Overview & Relational Model</td>
-        <td>
-          <Link className="btn btn-success mr-4" to="/docs/classic_quantum">Lecture Notes</Link>
-          <Link className="btn btn-success" to="/docs/blog">Slides</Link>
-        </td>
-      </tr>
-      <tr id="jan-17-2024">
-        <td>Jan 17</td>
-        <td>Lecture 01: Course Overview & Relational Model</td>
-        <td>
-          <Link className="btn btn-success mr-4" to="/docs/classic_quantum">Lecture Notes</Link>
-          <Link className="btn btn-success" to="/docs/blog">Slides</Link>
-        </td>
-      </tr>
-      <tr id="jan-17-2024">
-        <td>Jan 17</td>
-        <td>Lecture 01: Course Overview & Relational Model</td>
-        <td>
-          <Link className="btn btn-success mr-4" to="/docs/classic_quantum">Lecture Notes</Link>
-          <Link className="btn btn-success" to="/docs/blog">Slides</Link>
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-  )
-};
-
 export default function SchedulePage() {
   return (
     <Layout>
@@ -113,7 +40,7 @@ export default function SchedulePage() {
         <td>Jan 17</td>
         <td>Lecture #01: Course Overview & Relational Model</td>
         <td>
-          <Link className="btn btn-success mr-2" to="/docs/classic_quantum">Lecture Notes</Link>
+          <Link className="btn btn-success mr-3" to="/docs/classic_quantum">Lecture Notes</Link>
           <Link className="btn btn-success" to="/docs/blog">Slides</Link>
         </td>
       </tr>
