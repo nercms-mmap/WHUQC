@@ -230,9 +230,10 @@ const new_config = {
         src: 'img/whu.png',
       },
       items: [
-        { to: '/assignments', label: 'Assignments', position: 'left' },
-        { to: '/schedule', label: 'Schedule', position: 'left' },
-        { to: '/labs', label: 'Labs', position: 'left' },
+        // { to: '/assignments', label: 'Assignments', position: 'left' },
+        { to: '/schedule', label: '课程安排', position: 'left' },
+        { to: '/labs', label: '实验', position: 'left' },
+        { to: '/docs/classic_quantum', label: '讲义', position: 'right' },
         {
           href: 'https://github.com/ZiangTian/WHU-QC-site',
           label: 'Github',
