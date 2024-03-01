@@ -2,6 +2,7 @@
 sidebar_label: 'Quantum Gates'
 sidebar_position: 2
 title: Quantum Gates
+sidebar_class_name: hidden
 ---
 
 # Quantum Gates

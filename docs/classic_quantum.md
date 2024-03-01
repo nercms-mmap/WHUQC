@@ -1,7 +1,8 @@
 ---
 sidebar_label: 'Classic Quantum'
-sidebar_position: 0
+sidebar_position: 1
 title: Classic Quantum
+sidebar_class_name: hidden
 ---
 
 # The Leap from Classic to Quantum

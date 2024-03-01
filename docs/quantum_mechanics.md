@@ -2,6 +2,7 @@
 sidebar_label: 'Quantum Mechanics'
 sidebar_position: 1
 title: Quantum Mechanics
+sidebar_class_name: hidden
 ---
 
 # Quantum Mechanics
