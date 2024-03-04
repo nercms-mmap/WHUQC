@@ -93,7 +93,7 @@ Micius Salon in 2018[^3]. Here are some key points:
     alt="classic-quantum"
     style={{ width: '75%', height: 'auto', display: 'block', margin: '0 auto' }}
 />
-<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.1: history </figcaption>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.2: The comparison of classic and quantum computers </figcaption>
 
 -   The parallel superposition is brought by the fact that each quantum
     bit represents not a single state, but a "probabilistic
@@ -224,41 +224,61 @@ several basic properties:
 ### The Geometry of Complex Numbers
 
 :::note[definition]
-The complex plane is the plane formed by the complex numbers, with a
+The **complex plane** is the plane formed by the complex numbers, with a
 Cartesian coordinate system such that the horizontal x-axis, called the
 real axis, is formed by the real numbers, and the vertical y-axis,
 called the imaginary axis, is formed by the imaginary numbers.
 :::
 
-<!-- In the complex plane (Figure
-[\[fig:complex-plane\]](#fig:complex-plane){reference-type="ref"
-reference="fig:complex-plane"}), we can easily find that the modulus is
+In the complex plane (Figure
+[fig:complex-plane](#fig:complex-plane)), we can easily find that the modulus is
 nothing more than the length of the vector. Indeed, the length of a
 vector, via Pythagoras' theorem, is the square root of the sum of the
 squares of its edges, which is precisely the modulus, as defined in the
-previous section. -->
+previous section.
 
-<!-- Next comes addition: vectors can be added using the so-called
+<img
+    id="complex-plane"
+    src={require('../static/img/complex-plane.jpg').default}
+    alt="complex-plane"
+    style={{ width: '45%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>The complex plane </figcaption>
+
+Next comes addition: vectors can be added using the so-called
 **parallelogram rule** illustrated by Figure
-[\[fig:parallelogram-rule-addition\]](#fig:parallelogram-rule-addition){reference-type="ref"
-reference="fig:parallelogram-rule-addition"}. In words, draw the
+[parallelogram-rule-addition](#fig:parallelogram-rule-addition). In words, draw the
 parallelogram whose parallel edges are the two vectors to be added;
-their sum is the diagonal. -->
+their sum is the diagonal.
 
-<!-- Subtraction too has a clear geometric meaning: subtracting $c_2$ from
+
+<img
+    id="parallelogram-rule-addition"
+    src={require('../static/img/parallelogram-rule-addition.jpg').default}
+    alt="parallelogram-rule-addition"
+    style={{ width: '35%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>The parallelogram rule addition </figcaption>
+
+Subtraction too has a clear geometric meaning: subtracting $c_2$ from
 $c_1$ is the same as adding the negation of $c_2$, i.e., $-c_2$, to
 $c_1$ (Figure
-[\[fig:parallelogram-rule-subtraction\]](#fig:parallelogram-rule-subtraction){reference-type="ref"
-reference="fig:parallelogram-rule-subtraction"}). -->
+[parallelogram-rule-subtraction](#fig:parallelogram-rule-subtraction)).
 
-<!-- ::: figure*
-:::
+<img
+    id="parallelogram-rule-subtraction"
+    src={require('../static/img/parallelogram-rule-subtraction.jpg').default}
+    alt="parallelogram-rule-subtraction"
+    style={{ width: '35%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>The parallelogram rule subtraction</figcaption>
+
 
 To give a simple geometrical meaning to multiplication, we need to
 develop yet another characterization of complex numbers.
 
-::: definition
-The polar coordinate system is a two-dimensional coordinate system in
+:::note[definition]
+The **polar coordinate system** is a two-dimensional coordinate system in
 which each point on a plane is determined by a distance $\rho$ from a
 reference point and an angle $\theta$ from a reference direction.
 :::
@@ -268,11 +288,13 @@ Similar to the previous **Cartesian representation** $(a, b)$, the
 determine a complex number because these two representations can be
 mutually converted:
 
-::: multicols
+:::tip[representation 1]
 2 $$(a, b)\mapsto (\rho, \theta)$$ where $\rho$ is the modulus
 $$\rho=\sqrt{a^2+b^2}$$ and $\theta$ is also easy, via trigonometry
 $$\theta=\tan^{-1}\Bigg(\frac{b}{a}\Bigg)$$
+:::
 
+:::tip[representation 2]
 $$(\rho, \theta)\mapsto (a, b)$$ where $a$ is the real part
 $$a = \rho\cos(\theta)$$ and $b$ is the imaginary part
 $$b = \rho\sin(\theta)$$
@@ -282,7 +304,7 @@ In physics and engineering, angle $\theta$ is also known as **phase**
 and distance $\rho$ is also known as **magnitude**. Hence, we have
 another definition of a complex number
 
-::: definition
+:::note[definition]
 A complex number is a magnitude and a phase.
 :::
 
@@ -290,9 +312,9 @@ We are now ready for multiplication: given two complex numbers in polar
 coordinates, $c_1=(\rho_1, \theta_1)$ and $c_2=(\rho_2, \theta_2)$,
 their product can be obtained by simply multiplying their magnitude and
 adding their phase:
-$$c_1\times c_2=(\rho_1, \theta_1)\times (\rho_2, \theta_2)=(\rho_1\rho_2, \theta_1+\theta_2)$$ -->
+$$c_1\times c_2=(\rho_1, \theta_1)\times (\rho_2, \theta_2)=(\rho_1\rho_2, \theta_1+\theta_2)$$
 
-<!-- Now that we are armed with a geometric way of looking at multiplication,
+Now that we are armed with a geometric way of looking at multiplication,
 we can tackle division as well. After all, division is nothing more than
 the inverse operation of multiplication:
 $$\frac{c_1}{c_2}=\Bigg(\frac{\rho_1}{\rho_2}, \theta_1-\theta_2\Bigg)$$
@@ -300,10 +322,10 @@ $$\frac{c_1}{c_2}=\Bigg(\frac{\rho_1}{\rho_2}, \theta_1-\theta_2\Bigg)$$
 On this basis, we can further derive fast $n$-order power and root
 calculations about a complex number $c=(\rho, \theta)$
 $$c^n=(\rho^n, n\theta)$$ and
-$$c^{\frac{1}{n}}=\Bigg(\rho^{\frac{1}{n}}, \frac{1}{n}(n+k2\pi)\Bigg),\ \textrm{where}\ k=0,1,\cdots,n-1$$ -->
+$$c^{\frac{1}{n}}=\Bigg(\rho^{\frac{1}{n}}, \frac{1}{n}(n+k2\pi)\Bigg),\ \textrm{where}\ k=0,1,\cdots,n-1$$
 
-<!-- [^1]: <https://thequantuminsider.com/2020/05/26/history-of-quantum-computing/>
+[^1]: [history of quantum computing](https://thequantuminsider.com/2020/05/26/history-of-quantum-computing/)
 
-[^2]: <https://quantumpedia.uk/a-brief-history-of-quantum-computing-e0bbd05893d0>
+[^2]: [a brief history of quantum computing](https://quantumpedia.uk/a-brief-history-of-quantum-computing-e0bbd05893d0)
 
-[^3]: <https://www.bilibili.com/video/BV1Ct411Z7BQ/?spm_id_from=333.337.search-card.all.click&vd_source=322773747f9aa504da745054e83290e9> -->
+[^3]: [bilibili](https://www.bilibili.com/video/BV1Ct411Z7BQ/?spm_id_from=333.337.search-card.all.click&vd_source=322773747f9aa504da745054e83290e9)
