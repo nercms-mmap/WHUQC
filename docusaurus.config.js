@@ -49,15 +49,15 @@ const config = {
           // Remove this to remove the "edit this page" links.
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -233,7 +233,7 @@ const new_config = {
         // { to: '/assignments', label: 'Assignments', position: 'left' },
         { to: '/schedule', label: '课程安排', position: 'left' },
         { to: '/labs', label: '实验', position: 'left' },
-        { to: '/docs/classic_quantum', label: '讲义', position: 'right' },
+        { to: '/docs/introduction_and_complex_number', label: '讲义', position: 'right' },
         {
           href: 'https://github.com/ZiangTian/WHU-QC-site',
           label: 'Github',

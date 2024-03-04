@@ -18,7 +18,7 @@ hide_table_of_contents: false
 
 | 日期       | 幻灯片                                       | 讲义               |
 |------------|---------------------------------------------|-------------------------|
-| 2月 28日     |  [第0讲 课程信息.pdf](./assets/第0讲%20课程信息.pdf), [第1讲 绪论与复数.pdf](./assets/第1讲%20绪论与复数.pdf)| [Read Online](/docs/classic_quantum), [Download](./assets/LectureNote-20240228.pdf) |
+| 2月 28日     |  [第0讲 课程信息.pdf](./assets/第0讲%20课程信息.pdf), [第1讲 绪论与复数.pdf](./assets/第1讲%20绪论与复数.pdf)| [Read Online](/docs/introduction_and_complex_number), [Download](./assets/LectureNote-20240228.pdf) |
 
 
 <!-- ## 2024/3/6 第二次课
