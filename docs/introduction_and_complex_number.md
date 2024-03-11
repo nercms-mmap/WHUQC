@@ -136,11 +136,11 @@ a complex solution.
 
 :::note[definition]
 **Ordered pair representation** defines a complex number as an ordered pair
-of reals: $$c=a+b\mapsto (a, b)$$
+of reals: $$c=a+bi\mapsto (a, b)$$
 :::
 
 Hence, ordinary real numbers can be identified with pairs $(a, 0)$
-$$a\mapsto (a, b)$$ whereas imaginary numbers can be identified with
+$$a\mapsto (a, 0)$$ whereas imaginary numbers can be identified with
 pairs $(0, b)$. In particular, $$i\mapsto (0, 1)$$
 
 The four **arithmetic operations** between two complex numbers can be
@@ -322,7 +322,7 @@ $$\frac{c_1}{c_2}=\Bigg(\frac{\rho_1}{\rho_2}, \theta_1-\theta_2\Bigg)$$
 On this basis, we can further derive fast $n$-order power and root
 calculations about a complex number $c=(\rho, \theta)$
 $$c^n=(\rho^n, n\theta)$$ and
-$$c^{\frac{1}{n}}=\Bigg(\rho^{\frac{1}{n}}, \frac{1}{n}(n+k2\pi)\Bigg),\ \textrm{where}\ k=0,1,\cdots,n-1$$
+$$c^{\frac{1}{n}}=\Bigg(\rho^{\frac{1}{n}}, \frac{1}{n}(\theta+k2\pi)\Bigg),\ \textrm{where}\ k=0,1,\cdots,n-1$$
 
 [^1]: [history of quantum computing](https://thequantuminsider.com/2020/05/26/history-of-quantum-computing/)
 
