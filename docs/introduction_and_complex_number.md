@@ -125,7 +125,7 @@ instance, $$c=a+b\times i=a+bi$$ where $a$, $b$ are two real numbers,
 $a$ is called the real part of $c$, whereas $b$ is its imaginary part.
 The set of all complex numbers will be denoted as $\mathbb{C}$. When the
 $\times$ is understood, we shall omit it.
-::: 
+:::
 
 :::info[proposition]
 Every polynomial equation of one variable with complex coefficients has
