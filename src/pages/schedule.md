@@ -21,11 +21,17 @@ hide_table_of_contents: false
 | 2月 28日     |  [第0讲 课程信息.pdf](./assets/第0讲%20课程信息.pdf), [第1讲 绪论与复数.pdf](./assets/第1讲%20绪论与复数.pdf)| [Read Online](/docs/introduction_and_complex_number), [Download](./assets/LectureNote-20240228.pdf) |
 
 
-<!-- ## 2024/3/6 第二次课
+## 2024/3/6 第二次课
 
 - ### 教学内容
 
-- ### 课程资料 -->
+复向量空间
+
+- ### 课程资料
+
+| 日期       | 幻灯片                                       | 讲义               |
+|------------|---------------------------------------------|-------------------------|
+| 3月 6日     |  [第2讲 复向量空间.pdf](./assets/第2讲%20复向量空间.pdf)| [Read Online](/docs/introduction_and_complex_number), [Download](./assets/LectureNotes-20240305.pdf) |
 
 <!-- ### 第一次作业 -->
 

@@ -40,12 +40,12 @@ vii. Scalar multiplication distributes over complex addition:
      $(c_1+c_2)\cdot\boldsymbol{v}=c_1\cdot \boldsymbol{v}+c_2\cdot\boldsymbol{v}$,
 :::
 
-:::INFO[example]
+:::tip[example]
 ex:n-dim-vector-space $\mathbb{C}^n$, the set of vectors of length $n$
 with complex entries, is a complex vector space.
 :::
 
-:::info[example]
+:::tip[example]
 ex:nn-dim-vector-space $\mathbb{C}^{m\times n}$, the set of all
 $m$-by-$n$ matrices (two-dimensional arrays) with complex entries, is a
 complex vector space.
@@ -237,37 +237,55 @@ Utilities of Transition Matrix
 -   State re-representation in a new basis
     $$\boldsymbol{v}_{\mathcal{D}}=\mathbf{M}_{\mathcal{D}\leftarrow\mathcal{B}}\times \boldsymbol{v}_{\mathcal{B}}$$
 :::
-<!-- 
-:::info[example]
+
+
+<img
+    id="hadamard"
+    src={require('../static/img/hadamard.png').default}
+    alt="hadamard"
+    style={{ width: '75%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.1: The Hardamard matrix for basis
+transition </figcaption>
+
+
+:::tip[example: hadamard matrix]
 ex:hadamard In $\mathbb{R}^2$, the transition matrix from the canonical
 basis $$\begin{Bmatrix}
             \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix}   1 \\ 0 \end{bmatrix}
         \end{Bmatrix}$$ to this other basis $$\begin{Bmatrix}
             \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}, \begin{bmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{bmatrix}
-        \end{Bmatrix}$$ is the Hadamard matrix:
-$$\mathbf{H}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+        \end{Bmatrix}$$ is the Hadamard matrix: $$\mathbf{H}=\frac{1}{\sqrt{2}}\begin{bmatrix}
             1& 1\\1& -1
         \end{bmatrix}
         =\begin{bmatrix}
             \frac{1}{\sqrt{2}}& \frac{1}{\sqrt{2}}\\
             \frac{1}{\sqrt{2}}& -\frac{1}{\sqrt{2}}
         \end{bmatrix}$$ as shown in Figure
-[1.1](#fig:hardamard){reference-type="ref" reference="fig:hardamard"}.
+[1.1](#fig:hardamard).
 :::
 
-![The Hardamard matrix for basis
-transition](figures/hadamard.pdf){#fig:hardamard width="0.7\\linewidth"}
+<img
+    id="rolling-ball"
+    src={require('../static/img/rolling-ball.png').default}
+    alt="rolling-ball"
+    style={{ width: '55%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.2: A ball rolling down a ramp </figcaption>
+
 
 **The motivation to change basis.** In physics, we are often faced with
 a problem in which it is easier to calculate something in a noncanonical
 basis. For example, consider a ball rolling down a ramp as depicted in
-Figure [\[fig:rolling-ball\]](#fig:rolling-ball){reference-type="ref"
-reference="fig:rolling-ball"}.
+Figure [1.2](#fig:rolling-ball).
 
-<figure id="fig:basis">
-
-<figcaption>Basis transition example (a) and flowchart (b).</figcaption>
-</figure>
+<img
+    id="basis-transition"
+    src={require('../static/img/basis-transition.png').default}
+    alt="basis-transition"
+    style={{ width: '55%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.3: Problem-solving flowchart </figcaption>
 
 The ball will not be moving in the direction of the canonical basis.
 Rather it will be rolling downward in the direction of +45◦, −45◦ basis.
@@ -277,9 +295,7 @@ from one in the canonical basis to one in the other basis. In this other
 basis, the motion is easier to deal with. Once we have completed the
 calculations, we change our results into the more understandable
 canonical basis and produce the desired answer. We might envision this
-as the flowchart shown in Figure
-[\[fig:basis-transition\]](#fig:basis-transition){reference-type="ref"
-reference="fig:basis-transition"}.
+as the flowchart shown in Figure[1.3](#fig:basis-transition).
 
 Throughout this course, we shall go from one basis to another basis,
 perform some calculations, and finally revert to the original basis. The
@@ -290,7 +306,7 @@ basis.
 
 ### Inner Product
 
-::: definition
+:::note[definition]
 An inner product (also called a dot product or scalar product) on a
 complex vector space $\mathbb{V}$ is a function
 $$\langle\cdot, \cdot\rangle:\mathbb{V}\times \mathbb{V}\rightarrow \mathbb{C}$$
@@ -306,34 +322,32 @@ ii. Respects addition: $$\begin{aligned}
                 \langle\boldsymbol{v}_1, \boldsymbol{v}_3\rangle + \langle\boldsymbol{v}_2, \boldsymbol{v}_3\rangle\\
                 \langle\boldsymbol{v}_1, \boldsymbol{v}_2+\boldsymbol{v}_3\rangle&=
                 \langle\boldsymbol{v}_1, \boldsymbol{v}_2\rangle + \langle\boldsymbol{v}_1, \boldsymbol{v}_3\rangle
-            
-    \end{aligned}$$
+            \end{aligned}$$
 
 iii. Respects scalar multiplication: $$\begin{aligned}
                  \langle c\cdot \boldsymbol{v}_1, \boldsymbol{v}_2\rangle &= \overline{c}\times \langle \boldsymbol{v}_1, \boldsymbol{v}_2\rangle\\
                  \langle \boldsymbol{v}_1, c\cdot \boldsymbol{v}_2\rangle &= c\times \langle \boldsymbol{v}_1, \boldsymbol{v}_2\rangle
-             
-     \end{aligned}$$
+             \end{aligned}$$ -->
 
 iv. Skew symmetric:
     $$\langle \boldsymbol{v}_1, \boldsymbol{v}_2\rangle = \overline{\langle \boldsymbol{v}_2, \boldsymbol{v}_1\rangle}$$
 :::
 
-::: definition
+:::note[definition]
 A vector space with an inner space.
 :::
 
-::: example
-ex:Rn $\mathbb{R}^n$: The inner product is given as
+:::tip[example]
+The inner product is given as
 $$\langle\boldsymbol{v}_1, \boldsymbol{v}_2\rangle=\boldsymbol{v}_1^{\top}\times \boldsymbol{v}_2$$
 :::
 
-::: example
+:::tip[example]
 ex:Cn $\mathbb{C}^n$: The inner product is given as
 $$\langle\boldsymbol{v}_1, \boldsymbol{v}_2\rangle=\boldsymbol{v}_1^{\dagger}\times \boldsymbol{v}_2$$
 :::
 
-::: example
+:::tip[example]
 ex:Rnn $\mathbb{R}^{n\times n}$ has an inner product given for matrices
 $\mathbf{A}, \mathbf{B}\in\mathbb{R}^{n\times n}$ as
 $$\langle\mathbf{A}, \mathbf{B}\rangle=\Tr(\mathbf{A}^{\top}\times \mathbf{B})$$
@@ -341,13 +355,13 @@ where the **trace** of a square matrix $\mathbf{C}$ is given as the sum
 of the diagonal elements. That is, $$\Tr(C)=\sum_{i=0}^{n-1}C[i,i]$$
 :::
 
-::: example
+:::tip[example]
 ex:Cnn $\mathbb{C}^{n\times n}$ has an inner product given for matrices
 $\mathbf{A}, \mathbf{B}\in\mathbb{C}^{n\times n}$ as
 $$\langle\mathbf{A}, \mathbf{B}\rangle=\Tr(\mathbf{A}^{\dagger}\times \mathbf{B})$$
 :::
 
-::: definition
+:::note[definition]
 Norm is a unary function derived from inner product
 $$|\cdot|: \mathbb{V}\rightarrow \mathbb{R}$$ defined as
 $|\boldsymbol{v}|=\sqrt{\langle\boldsymbol{v},\boldsymbol{v}\rangle}$,
@@ -363,7 +377,7 @@ which has the following properties
     $$|c\cdot\boldsymbol{v}|=|c|\cdot|\boldsymbol{v}|$$
 :::
 
-::: definition
+:::note[definition]
 Distance is a binary function defined based on norm
 $$d(\cdot, \cdot): \mathbb{V}\times \mathbb{V}\rightarrow \mathbb{R}$$
 defined as
@@ -380,7 +394,7 @@ which has the following properties
     $$d(\boldsymbol{u}, \boldsymbol{v})=d(\boldsymbol{v}, \boldsymbol{u})$$
 :::
 
-::: definition
+:::note[definition]
 A basis
 $\mathcal{B}=\{\boldsymbol{v}_0, \boldsymbol{v}_1, \cdots, \boldsymbol{v}_{n-1}\}$
 for an inner space $$\langle\boldsymbol{v}_i, \boldsymbol{v}_j\rangle=
@@ -394,17 +408,22 @@ for an inner space $$\langle\boldsymbol{v}_i, \boldsymbol{v}_j\rangle=
     $$\boldsymbol{v}=\sum_{i=0}^{n-1}\langle\boldsymbol{e}_i, \boldsymbol{v}\rangle\boldsymbol{e}_i$$
 :::
 
-**Note:** inner product defines geometry in the vector space (Figure
-[1.3](#fig:inner-product){reference-type="ref"
-reference="fig:inner-product"}).
 
-![Inner product lays the geometric foundation in the vector
-space.](figures/inner-product.pdf){#fig:inner-product
-width="\\linewidth"}
+**Note:** inner product defines geometry in the vector space (Figure
+[1.4](#fig:inner-product)).
+
+
+<img
+    id="inner-product"
+    src={require('../static/img/inner-product.png').default}
+    alt="inner-product"
+    style={{ width: '75%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.4: Inner product lays the geometric foundation in the vector space </figcaption>
 
 ### Hilbert Space
 
-::: definition
+:::note[definition]
 Within an inner product space $\mathbb{V}$, $\langle\cdot, \cdot\rangle$
 (with the derived norm and a distance function), a sequence of vectors
 $\boldsymbol{v}_0, \boldsymbol{v}_1, \cdots$ is called a Cauchy sequence
@@ -413,20 +432,20 @@ for all
 $m, n\geq N_0, d(\boldsymbol{v}_m, \boldsymbol{v}_n)\leq \epsilon$.
 :::
 
-::: definition
+:::note[definition]
 For any Cauchy sequence $\boldsymbol{v}_0, \boldsymbol{v}_1, \cdots$, it
 is complete if there exist a $\overline{\boldsymbol{v}}\in\mathbb{V}$,
 such that
 $\lim\limits_{n\rightarrow \infty}d(\boldsymbol{v}_n-\overline{\boldsymbol{v}})=0$.
 :::
 
-::: definition
+:::note[definition]
 A Hilbert space is a complex inner space that is complete.
 :::
 
 ## Eigenvalue and Eigenvector
 
-::: definition
+:::note[definition]
 For a matrix $\mathbf{A}\in\mathbb{C}^{n\times n}$, if there is a number
 $c\in\mathbb{C}$ and a vector $0\neq \boldsymbol{v}\in\mathbb{C}^n$ such
 that $$\mathbf{A}\boldsymbol{v}=c\cdot\boldsymbol{v}$$ then $c$ is
@@ -438,89 +457,90 @@ eigenvector of $\mathbf{A}$ associate with $c$.
 
 ### Hermitian Matrix
 
-::: definition
+:::note[definition]
 An $n$-by-$n$ matrix $\mathbf{A}$ is called hermitian if
 $\mathbf{A}^{\dagger}=\mathbf{A}$. In other words,
 $A[j, k]=\overline{A[k, j]}$.
 :::
 
-::: definition
+:::note[definition]
 If $\mathbf{A}$ is a hermitian matrix then the operator that it
 represents is called self-adjoint.
 :::
 
-::: proposition
-[]{#prop:symmetry label="prop:symmetry"} if
+:::info[proposition]
+if
 $\mathbf{A}\in \mathbb{C}^{n\times n}$ is Hermitian,
 $\forall \boldsymbol{v},\boldsymbol{w}\in\mathbb{C}^{n}$ we have
 $$\langle\mathbf{A}\boldsymbol{v}, \boldsymbol{w}\rangle=\langle\boldsymbol{v}, \mathbf{A}\boldsymbol{w}\rangle$$
 
-::: proof
+:::warning[proof]
 *Proof.* $$\begin{aligned}
         \langle\mathbf{A}\boldsymbol{v},\boldsymbol{w}\rangle
-        &=\left(\mathbf{A}\boldsymbol{v}\right)^{\dagger}\times \boldsymbol{w} &\textrm{\textcolor{blue}{\% definition of inner product}}\\
-        &=\boldsymbol{v}^{\dagger}\times \mathbf{A}^{\dagger}\times \boldsymbol{w} &\textrm{\textcolor{blue}{\% multiplication relates to the adjoint}}\\
-        &=\boldsymbol{v}^{\dagger}\times \mathbf{A}\times \boldsymbol{w} \ &\textrm{\textcolor{blue}{\% definition of Hermitian matrices}}\\
-        &=\boldsymbol{v}^{\dagger}\times\left(\mathbf{A}\boldsymbol{w}\right) \ &\textrm{\textcolor{blue}{\% multiplication is associative}}\\
+        &=\left(\mathbf{A}\boldsymbol{v}\right)^{\dagger}\times \boldsymbol{w} &\textrm{\textcolor{blue}{\ definition of inner product}}\\
+        &=\boldsymbol{v}^{\dagger}\times \mathbf{A}^{\dagger}\times \boldsymbol{w} &\textrm{\textcolor{blue}{\ multiplication relates to the adjoint}}\\
+        &=\boldsymbol{v}^{\dagger}\times \mathbf{A}\times \boldsymbol{w} \ &\textrm{\textcolor{blue}{\ definition of Hermitian matrices}}\\
+        &=\boldsymbol{v}^{\dagger}\times\left(\mathbf{A}\boldsymbol{w}\right) \ &\textrm{\textcolor{blue}{\ multiplication is associative}}\\
         &=\langle\boldsymbol{v}, \mathbf{A}\boldsymbol{w}\rangle
-        &\textrm{\textcolor{blue}{\% definition of inner product}}
-    
-\end{aligned}$$ ◻
-:::
+        &\textrm{\textcolor{blue}{\ definition of inner product}}
+    \end{aligned}$$ ◻
 :::
 
-::: proposition
-[]{#prop:real label="prop:real"} For a Hermitian matrix, its all
+:::
+
+:::info[proposition]
+For a Hermitian matrix, its all
 eigenvalues are real.
 
-::: proof
+:::warning[proof]
 *Proof.* Let $\mathbf{A}\in\mathbb{C}^{n\times n}$ be a Hermitian matrix
 with an eigenvalue $c\in\mathbb{C}$ and an eigenvector
 $\boldsymbol{v}\in\mathbb{C}^n$ $$\begin{aligned}
             c\langle\boldsymbol{v},\boldsymbol{v}\rangle
             &=\langle\boldsymbol{v}, c\boldsymbol{v}\rangle 
-            &\textrm{\textcolor{blue}{\% inner product respects scalar multiplication}}\\
+            &\textrm{\textcolor{blue}{\ inner product respects scalar multiplication}}\\
             &=\langle\boldsymbol{v}, \mathbf{A}\boldsymbol{v}\rangle 
-            &\textrm{\textcolor{blue}{\% definition of eigenvalue and eigenvector}}\\
+            &\textrm{\textcolor{blue}{\ definition of eigenvalue and eigenvector}}\\
             &=\langle\mathbf{A}\boldsymbol{v}, \boldsymbol{v}\rangle 
-            &\textrm{\textcolor{blue}{\% see Proposition \ref{prop:symmetry}}}\\
+            &\textrm{\textcolor{blue}{\ see Proposition of Symmetry}}\\
             &=\langle c\boldsymbol{v}, \boldsymbol{v}\rangle 
-            &\textrm{\textcolor{blue}{\% definition of eigenvalue and eigenvector}}\\
+            &\textrm{\textcolor{blue}{\ definition of eigenvalue and eigenvector}}\\
             &=\overline{c}\langle\boldsymbol{v}, \boldsymbol{v}\rangle 
-            &\textrm{\textcolor{blue}{\% inner product respects scalar multiplication}}\\
-        
+            &\textrm{\textcolor{blue}{\ inner product respects scalar multiplication}}\\
 \end{aligned}$$ ◻
 :::
-:::
 
-::: proposition
+
+
+
+:::info[proposition]
 For a Hermitian matrix, distinct eigenvectors that have distinct
 eigenvalues are orthogonal
 
-::: proof
+:::warning[proof]
 *Proof.* Let $\mathbf{A}\in\mathbb{C}^{n\times n}$ be a Hermitian matrix
 with two distinct eigenvectors
 $\boldsymbol{v}_1\neq\boldsymbol{v}_2\in\mathbb{C}^n$ and their related
 eigenvalues $c_1,c_2\in\mathbb{C}$ $$\begin{aligned}
             c_2\langle\boldsymbol{v}_1,\boldsymbol{v}_2\rangle
             &=\langle\boldsymbol{v}_1, c_2\boldsymbol{v}_2\rangle 
-            &\textrm{\textcolor{blue}{\% inner product respects scalar multiplication}}\\
+            &\textrm{\textcolor{blue}{\ inner product respects scalar multiplication}}\\
             &=\langle\boldsymbol{v}_1, \mathbf{A}\boldsymbol{v}_2\rangle 
-            &\textrm{\textcolor{blue}{\% definition of eigenvalue and eigenvector}}\\
+            &\textrm{\textcolor{blue}{\ definition of eigenvalue and eigenvector}}\\
             &=\langle\mathbf{A}\boldsymbol{v}_1, \boldsymbol{v}_2\rangle 
-            &\textrm{\textcolor{blue}{\% see Proposition \ref{prop:symmetry}}}\\
+            &\textrm{\textcolor{blue}{\ see Proposition \ref{prop:symmetry}}}\\
             &=\langle c_1\boldsymbol{v}_1, \boldsymbol{v}_2\rangle 
-            &\textrm{\textcolor{blue}{\% definition of eigenvalue and eigenvector}}\\
+            &\textrm{\textcolor{blue}{\ definition of eigenvalue and eigenvector}}\\
             &=\overline{c_1}\langle\boldsymbol{v}_1, \boldsymbol{v}_2\rangle 
-            &\textrm{\textcolor{blue}{\% inner product respects scalar multiplication}}\\
+            &\textrm{\textcolor{blue}{\ inner product respects scalar multiplication}}\\
             &=c_1\langle\boldsymbol{v}_1, \boldsymbol{v}_2\rangle 
-            &\textrm{\textcolor{blue}{\% see proposition \ref{prop:real}}}
-        
+            &\textrm{\textcolor{blue}{\ see proposition \ref{prop:real}}}
 \end{aligned}$$ ◻
 :::
-:::
 
-::: proposition
+
+
+:::info[proposition]
 Every self-adjoint operator $\mathbf{A}$ on a finite-dimensional complex
 vector space $\mathbb{V}$ can be represented by a diagonal matrix whose
 diagonal entries are the eigenvalues of $\mathbf{A}$, and whose
@@ -537,15 +557,16 @@ the eigenvectors of the associated Hermitian matrix.
 
 ### Unitary Matrix
 
-::: definition
+:::note[definition]
 Given a reversible matrix $\mathbf{U}\in\mathbb{C}^{n\times n}$ such
 that
 $$\mathbf{U}\times \mathbf{U}^{\dagger} = \mathbf{U}^{\dagger}\times \mathbf{U}=\mathbf{I}_n$$
 then $\mathbf{U}$ is a unitary matrix.
 :::
 
-::: example
-ex:unitary-example $\mathbf{U}_1=\begin{bmatrix}
+
+:::tip[example]
+$\mathbf{U}_1=\begin{bmatrix}
         \cos\theta &-\sin\theta &0\\[8pt]
         \sin\theta &\cos\theta &0\\[8pt]
         0 &0 &1
@@ -556,81 +577,80 @@ ex:unitary-example $\mathbf{U}_1=\begin{bmatrix}
     \end{bmatrix}$
 :::
 
-::: proposition
+:::info[proposition]
 If $\mathbf{U}\in\mathbb{C}^{n\times n}$ is unitary,
 $\forall \boldsymbol{v}, \boldsymbol{w}\in\mathbb{C}^n$ we have
 $$\langle\mathbf{U}\boldsymbol{v}, \mathbf{U}\boldsymbol{w}\rangle=\langle\boldsymbol{v}, \boldsymbol{w}\rangle$$
 
-::: proof
+:::warning[proof]
 *Proof.* Let $\mathbf{A}\in\mathbb{C}^{n\times n}$ be a Hermitian matrix
 with two distinct eigenvectors
 $\boldsymbol{v}_1\neq\boldsymbol{v}_2\in\mathbb{C}^n$ and their related
 eigenvalues $c_1,c_2\in\mathbb{C}$ $$\begin{aligned}
             \langle\mathbf{U}\boldsymbol{v}, \mathbf{U}\boldsymbol{w}\rangle
             &=\left(\mathbf{U}\boldsymbol{v}\right)^{\dagger}\times  \left(\mathbf{U}\boldsymbol{w}\right)
-            &\textrm{\textcolor{blue}{\% definition for inner product}}\\
+            &\textrm{\textcolor{blue}{\ definition for inner product}}\\
             &=\boldsymbol{v}^{\dagger}\mathbf{U}^{\dagger}\times \mathbf{U}\boldsymbol{w}
-            &\textrm{\textcolor{blue}{\% multiplication relates to adjoint}}\\
+            &\textrm{\textcolor{blue}{\ multiplication relates to adjoint}}\\
             &=\boldsymbol{v}^{\dagger}\times \mathbf{I}\times \boldsymbol{w}
-            &\textrm{\textcolor{blue}{\% definition for unitary matrices}}\\
+            &\textrm{\textcolor{blue}{\ definition for unitary matrices}}\\
             &=\langle \boldsymbol{v}, \boldsymbol{w}\rangle 
-            &\textrm{\textcolor{blue}{\% definition for inner product}}
-        
+            &\textrm{\textcolor{blue}{\ definition for inner product}}
 \end{aligned}$$ ◻
 :::
 :::
 
-::: proposition
+:::info[proposition]
 If $\mathbf{U}\in\mathbb{C}^{n\times n}$ is unitary,
 $\forall \boldsymbol{v}, \in\mathbb{C}^n$ we have
 $$|\mathbf{U}\boldsymbol{v}|=|\boldsymbol{v}|$$
 
-::: proof
+:::warning[proof]
 *Proof.* Let $\mathbf{A}\in\mathbb{C}^{n\times n}$ be a Hermitian matrix
 with two distinct eigenvectors
 $\boldsymbol{v}_1\neq\boldsymbol{v}_2\in\mathbb{C}^n$ and their related
 eigenvalues $c_1,c_2\in\mathbb{C}$ $$\begin{aligned}
             |\mathbf{U}\boldsymbol{v}|
             &=\sqrt{\langle\mathbf{U}\boldsymbol{v}, \langle\mathbf{U}\boldsymbol{v}\rangle}
-            &\textrm{\textcolor{blue}{\% definition for norm}}\\
+            &\textrm{\textcolor{blue}{\ definition for norm}}\\
             &=\sqrt{\langle\boldsymbol{v}, \boldsymbol{v}\rangle}
-            &\textrm{\textcolor{blue}{\% unitary matrices preserve inner product}}\\
+            &\textrm{\textcolor{blue}{\ unitary matrices preserve inner product}}\\
             &=|\boldsymbol{v}|
-            &\textrm{\textcolor{blue}{\% definition for norm}}\\
-        
+            &\textrm{\textcolor{blue}{\ definition for norm}}\\
 \end{aligned}$$ ◻
 :::
 :::
 
-::: proposition
+:::info[proposition]
 If $\mathbf{U}\in\mathbb{C}^{n\times n}$ is unitary,
 $\forall \boldsymbol{v}, \boldsymbol{w}\in\mathbb{C}^n$ we have
 $$d(\mathbf{U}\boldsymbol{v}, \mathbf{U}\boldsymbol{w})=d(\boldsymbol{v}, \boldsymbol{w})$$
 
-::: proof
+:::warning[proof]
 *Proof.* $$\begin{aligned}
             d(\mathbf{U}\boldsymbol{v}, \mathbf{U}\boldsymbol{w})
             &=|\mathbf{U}\boldsymbol{v}-\mathbf{U}\boldsymbol{w}|
-            &\textrm{\textcolor{blue}{\% definition for distance}}\\
+            &\textrm{\textcolor{blue}{\ definition for distance}}\\
             &=|\mathbf{U}(\boldsymbol{v}-\boldsymbol{w})|
-            &\textrm{\textcolor{blue}{\% multiplication distributes over addition}}\\
+            &\textrm{\textcolor{blue}{\ multiplication distributes over addition}}\\
             &=|\boldsymbol{v}-\boldsymbol{w}|
-            &\textrm{\textcolor{blue}{\% unitary matrices preserve norm}}\\
+            &\textrm{\textcolor{blue}{\ unitary matrices preserve norm}}\\
             &=d(\boldsymbol{v}, \boldsymbol{w})
-            &\textrm{\textcolor{blue}{\% definition of distance}}
-        
+            &\textrm{\textcolor{blue}{\ definition of distance}}
 \end{aligned}$$ ◻
 :::
 :::
 
-::: proposition
+:::info[proposition]
 The modulus of eigenvalues of unitary matrix is $1$.
 :::
 
-::: proposition
+:::info[proposition]
 Unitary matrix is the transition matrix from an orthonormal basis to
 another orthonormal basis.
 :::
+
+
 
 **Physical meaning of unitary Matrix.** What does unitary really mean?
 As we saw, it means that it preserves the geometry. But it also means
@@ -646,11 +666,17 @@ takes the result of $\mathbf{U}$'s action and gets back the original
 vector. In the quantum world, all actions (that are not measurements)
 are "undoable" or "reversible" in such a manner.
 
-![The role of Hermitian and unitary matrices.](figures/UH.pdf){#fig:uh
-width=".9\\linewidth"}
+<img
+    id="UH"
+    src={require('../static/img/UH.png').default}
+    alt="UH"
+    style={{ width: '75%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.5: The role of Hermitian and unitary matrices </figcaption>
 
-**The roles of Hermitian and unitary matrices in quantum computing.** As
-shown in Figure [1.4](#fig:uh){reference-type="ref" reference="fig:uh"},
+
+
+**The roles of Hermitian and unitary matrices in quantum computing.** As shown in Figure [1.5](#fig:UH),
 the Hermitian matrix plays an important role in the quantum measurement
 phrase, which decides the concrete basis to observe the final
 computational result $\ket{\psi^{*}}$. Once the basis ($\mathbf{H}_1$ or
@@ -661,9 +687,17 @@ the state of the quantum computer. Considering its reversible property,
 all actions performed in quantum computing can be undone by performing
 an action described by $\mathbf{U}^{\dagger}$. The relations of
 identity, Hermitian, unitary, and square matrices are shown in Figure
-[1.5](#fig:types-of-matrices){reference-type="ref"
-reference="fig:types-of-matrices"}.
+[1.6](#fig:types-of-matrices).
 
-![Types of
-matrices.](figures/matrix-relationship.pdf){#fig:types-of-matrices
-width="0.9\\linewidth"} -->
+
+
+
+<img
+    id="types-of-matrices"
+    src={require('../static/img/matrix-relationship.png').default}
+    alt="types-of-matrices"
+    style={{ width: '75%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.6: Types of
+matrices. </figcaption>
+
