@@ -31,7 +31,7 @@ hide_table_of_contents: false
 
 | 日期       | 幻灯片                                       | 讲义               |
 |------------|---------------------------------------------|-------------------------|
-| 3月 6日     |  [第2讲 复向量空间.pdf](./assets/第2讲%20复向量空间.pdf)| [Read Online](/docs/introduction_and_complex_number), [Download](./assets/LectureNotes-20240305.pdf) |
+| 3月 6日     |  [第2讲 复向量空间.pdf](./assets/第2讲%20复向量空间.pdf)| [Read Online](/docs/complex_vector_space), [Download](./assets/LectureNotes-20240305.pdf) |
 
 <!-- ### 第一次作业 -->
 
