@@ -96,7 +96,7 @@ const config = {
           },
           {to: '/blog', label: 'Slide', position: 'left'},
           {
-            href: 'https://github.com/ZiangTian/WHU-QC-site',
+            href: 'https://github.com/facebook/docusaurus',
             label: 'Github',
             position: 'right',
           },
@@ -235,7 +235,7 @@ const new_config = {
         { to: '/labs', label: '实验', position: 'left' },
         { to: '/docs/introduction_and_complex_number', label: '讲义', position: 'right' },
         {
-          href: 'https://github.com/ZiangTian/WHU-QC-site',
+          href: 'https://github.com/facebook/docusaurus',
           label: 'Github',
           position: 'right',
         },
