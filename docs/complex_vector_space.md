@@ -1,3 +1,10 @@
+---
+sidebar_label: 'Complex Vector Space'
+sidebar_position: 1
+title: Complex Vector Space
+# sidebar_class_name: hidden
+---
+
 # Complex Vector Space
 
 ## Complex Vector Space
