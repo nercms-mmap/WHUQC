@@ -39,7 +39,7 @@ hide_table_of_contents: false
 
 | 日期       | 幻灯片                                       | 讲义               |
 |------------|---------------------------------------------|-------------------------|
-| 3月13日     |  [第3讲 从经典系统到量子系统.pdf](./assets/第3讲%20从经典系统到量子系统.pdf)| [Read Online](/docs/classic_quantum), [Download](./assets/LectureNotes-20240305.pdf) |
+| 3月13日     |  [第3讲 从经典系统到量子系统.pdf](./assets/第3讲%20从经典系统到量子系统.pdf)| [Read Online](/docs/classic_quantum), [Download](./assets/LectureNotes-0319.pdf) |
 
 ### 第一次作业
 
