@@ -253,7 +253,7 @@ cycles as follows: $$\begin{aligned}\boldsymbol{x}_{0}=\begin{bmatrix}1 & 0 & 0 
 <figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.9: Double slit experiment </figcaption>
 
 :::note[example]
-ex:double-silt Given a double silt experiment as shown in Figure
+Given a double silt experiment as shown in Figure
 [1.9](#fig:double-silt). The photons are ejected from the
 flashlight, pass through two narrow slits in the wall, and eventually
 land on the screens behind the wall. Its 1-step and 2-step dynamics
