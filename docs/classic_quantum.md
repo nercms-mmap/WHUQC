@@ -198,8 +198,111 @@ matrix as exemplified in Figure
 />
 <figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.7: quantum-system</figcaption>
 
-Table [1.2](#tab:system-comparison) gives a detailed comparison of three
+Table below gives a detailed comparison of three
 systems in terms their states and dynamics. In particular, the dynamics
 is represented in two different forms, which are graph (Gra.) and matrix
 (Mat.), respectively.
 
+
+|                     | Classic Deterministic System                                | Probabilistic System                                         | Quantum System                                               |
+| ------------------- | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **State**           | $\boldsymbol{x}=[x_1, x_2, x_3]^{\top}$, $x_i\in\mathbb{N}$ | $\boldsymbol{x}=[p_1, p_2, p_3]^{\top}$, $x_i\in[0,1], \sum_i p_i=1$ | $\boldsymbol{x}=[c_1, c_2, c_3]^{\top}$,$c_i\in\mathbb{C}, \sum_i $ |
+| **Dynamics (Gra.)** | Directed unweighted graph                                   | Directed (probabilistic) weighted graph                      | Directed (complex) weighted graph                            |
+| **Dynamics (Mat.)** | Boolean adjacency matrix                                    | Doubly stochastic matrix                                     | Unitary matrix whose modulus squares is a doubly stochastic matrix |
+
+The **state evolvement** is formulated as matrix multiplication
+$\boldsymbol{x}_{t+1}=\mathbf{M}\boldsymbol{x}_{t}$.
+
+The **forward dynamics** and **backward dynamics** can be represented as
+a matrix $\mathbf{M}$ and its adjoint $\mathbf{M}^{\dagger}$ as shown in the following
+Table. This means that if you perform some
+operation $\boldsymbol{x}\mapsto\mathbf{M}\boldsymbol{x}$ and then
+"undo" the operation
+$\mathbf{M}^{\dagger}\mathbf{M}\boldsymbol{x}=\mathbf{I}\boldsymbol{x}=\boldsymbol{x}$,
+you will find yourself (with probability 1) in the same state with which
+you began.
+
+
+
+|                       | Dynamics graph | Dynamics Matrix                                              |
+| --------------------- | -------------- | ------------------------------------------------------------ |
+| **Forward dynamics**  |    ![](../static/img/quantum-dynamics.png)            | $\mathbf{M}=\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\\[8pt]\frac{-i}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0\\[8pt]0 & 0 & i\\[4pt]\end{bmatrix}$ |
+| **Backward dynamics** |        ![](../static/img/backward-quantum-dynamics.png)        | $\mathbf{M}=\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{i}{\sqrt{2}} & 0\\[8pt]\frac{1}{\sqrt{2}} & \frac{-i}{\sqrt{2}} & 0\\[8pt]0 & 0 & -i\\[4pt]\end{bmatrix}$ |
+
+<img
+    id="quantum-billiard"
+    src={require('../static/img/quantum-billiard.png').default}
+    alt="quantum-billiard"
+    style={{ width: '55%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.8: quantum billiard </figcaption>
+
+:::note[example]
+Consider a quantum billiard with dynamics shown in
+Figure [1.8](#fig:quantum-billiard) and initial state
+$\boldsymbol{x}_{0}$, its state evolvement procedure exhibits periodic
+cycles as follows: $$\begin{aligned}\boldsymbol{x}_{0}=\begin{bmatrix}1 & 0 & 0 & 0\end{bmatrix}^{\top}&\stackrel{\mathbf{M}}{\longmapsto}{\color{black}\boldsymbol{x}_{1}}=\begin{bmatrix}0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\end{bmatrix}^{\top}\\&\stackrel{\mathbf{M}}{\longmapsto}{\color{black}\boldsymbol{x}_{2}}={\color{red}\boldsymbol{x}_{0}}\stackrel{\mathbf{M}}{\longmapsto}\boldsymbol{x}_{3}={\color{blue}\boldsymbol{x}_{1}}\stackrel{\mathbf{M}}{\longmapsto}\cdots\end{aligned}$$
+:::
+
+<img
+    id="double-silt"
+    src={require('../static/img/double-silt.png').default}
+    alt="double-silt"
+    style={{ width: '90%', height: 'auto', display: 'block', margin: '0 auto' }}
+/>
+<figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>Figure 1.9: Double slit experiment </figcaption>
+
+:::note[example]
+ex:double-silt Given a double silt experiment as shown in Figure
+[1.9](#fig:double-silt). The photons are ejected from the
+flashlight, pass through two narrow slits in the wall, and eventually
+land on the screens behind the wall. Its 1-step and 2-step dynamics
+matrices are respectively $$\mathbf{M}=\begin{bmatrix}
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\[8pt]
+            \frac{1}{\sqrt{2}} & 0 & 0 & 0 & 0 & 0 & 0 & 0\\[8pt]
+            \frac{1}{\sqrt{2}} & 0 & 0 & 0 & 0 & 0 & 0 & 0\\[8pt]
+            0 & \frac{-1+i}{\sqrt{6}} & 0 & 1 & 0 & 0 & 0 & 0\\[8pt]
+            0 & \frac{-1-i}{\sqrt{6}} & 0 & 0 & 1 & 0 & 0 & 0\\[8pt]
+            0 & \frac{1-i}{\sqrt{6}} & \frac{-1+i}{\sqrt{6}} & 0 & 0 & 1 & 0 & 0\\[8pt]
+            0 & 0 & \frac{-1-i}{\sqrt{6}} & 0 & 0 & 0 & 1 & 0\\[8pt]
+            0 & 0 & \frac{1-i}{\sqrt{6}} & 0 & 0 & 0 & 0 & 1\\[8pt]
+        \end{bmatrix}\nonumber\mapsto
+        \mathbf{M}^2=\begin{bmatrix}
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\[8pt]
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\[8pt]
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\[8pt]
+            \frac{-1+i}{\sqrt{12}} & \frac{-1+i}{\sqrt{6}} & 0 & 1 & 0 & 0 & 0 & 0\\[8pt]
+            \frac{-1-i}{\sqrt{12}} & \frac{-1-i}{\sqrt{6}} & 0 & 0 & 1 & 0 & 0 & 0\\[8pt]
+            \color{red}{0} & \frac{1-i}{\sqrt{6}} & \frac{-1+i}{\sqrt{6}} & 0 & 0 & 1 & 0 & 0\\[8pt]
+            \frac{-1-i}{\sqrt{12}} & 0 & \frac{-1-i}{\sqrt{6}} & 0 & 0 & 0 & 1 & 0\\[8pt]
+            \frac{-1+i}{\sqrt{12}} & 0 & \frac{1-i}{\sqrt{6}} & 0 & 0 & 0 & 0 & 1\\[8pt]
+        \end{bmatrix}\nonumber$$ Note that
+$\mathbf{M}(5,0)=\frac{1}{\sqrt{2}}(\frac{1-i}{\sqrt{6}})+\frac{1}{\sqrt{2}}(\frac{-1+i}{\sqrt{6}})=\frac{1-i}{\sqrt{12}}+\frac{-1+i}{\sqrt{12}}=\frac{0}{\sqrt{12}}=\color{red}{0}$,
+which is called **interference** phenomenon.
+:::
+
+**Superposition**. Let the state of the system be given by
+$\boldsymbol{x}= [c_0, c_1, \cdots ,c_{n−1}]^{\top}\in\mathbb{C}^n$. It
+is incorrect to say that the probability of the photon's being in
+position $k$ is $|c_k|^2$. Rather, to be in state $\boldsymbol{x}$ means
+that the particle is in some sense in *all* positions simultaneously.
+The photon passes through the top slit and the bottom slit
+simultaneously, and when it exits both slits, it can cancel itself out.
+A photon is not in a single position, rather it is in many positions, a
+superposition.
+
+**Measurement and collapse**. The reason we see particles in one
+particular position is because we have performed a measurement. When we
+measure something at the quantum level, the quantum object that we have
+measured is no longer in a superposition of states, rather it collapses
+to a single classical state. So we have to redefine what the state of a
+quantum system is: a system is in state $\boldsymbol{x}$ means that
+*after measuring* it, it will be found in position $i$ with probability
+$|c_i|^2$.
+
+**Power of quantum computing.** It is exactly this superposition of
+states that is the real power behind quantum computing. Classical
+computers are in one state at every moment. Imagine putting a computer
+in many different classical states simultaneously and then processing
+with all the states at once. This is the ultimate in parallel
+processing!
