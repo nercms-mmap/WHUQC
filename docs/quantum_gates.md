@@ -599,7 +599,7 @@ gates. Their relationship can be illustrated by the following Figure
 
 <img
     id="fig:gate-relation"
-    src={require('../static/img/fredkin.png').default}
+    src={require('../static/img/gate-relation.png').default}
     alt="gate relation"
     style={{ width: '80%', height: 'auto', display: 'block', margin: '0 auto' }}
 />
