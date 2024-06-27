@@ -51,7 +51,20 @@ hide_table_of_contents: false
 请注意提交截止日期！
 :::
 
-<!-- ## 2024/3/20 第四次课 -->
+作业讲解
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fcfQkxwz4Oo?si=cgepS5BmxxywHB5R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!-- <iframe src="//player.bilibili.com/player.html?aid=1802844702&bvid=BV1Kt421J7ey&cid=1501704031&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
+
+[sth](http://47.97.27.217/TAVids/QC1.mp4)
+
+## 2024/3/20 第四次课
+
+
 
 <!-- ## 2024/3/27 第五次课 -->
 
