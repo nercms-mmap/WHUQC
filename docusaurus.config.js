@@ -95,11 +95,11 @@ const config = {
             label: 'Handouts',
           },
           {to: '/blog', label: 'Slide', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'Github',
-            position: 'right',
-          },
+          // {
+          //   href: 'https://github.com/facebook/docusaurus',
+          //   label: 'Github',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {
