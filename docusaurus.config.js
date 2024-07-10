@@ -231,7 +231,7 @@ const new_config = {
       },
       items: [
         // { to: '/assignments', label: 'Assignments', position: 'left' },
-        { to: '/schedule', label: '课程安排', position: 'left' },
+        { to: '/schedule', label: '材料下载', position: 'left' },
         { to: '/labs', label: '实验', position: 'left' },
         { to: '/docs/introduction_and_complex_number', label: '讲义', position: 'right' },
         {
