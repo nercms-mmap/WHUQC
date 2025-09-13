@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2775],{2979:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/WHUQC/blog/tags/hello","allTagsPath":"/WHUQC/blog/tags","count":2,"unlisted":false}')}}]);
