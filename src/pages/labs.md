@@ -10,9 +10,9 @@ hide_table_of_contents: false
 
 | 实验手册       | 实验平台链接                                    | 
 |------------|---------------------------------------------| 
+| [量子计算实验手册第三版-腾讯-2025修订版.pdf](./assets/量子计算实验手册第三版-腾讯-2025修订版.pdf) | [腾讯量子云平台](https://quantum.tencent.com/cloud/?#qq) | 
 | [量子计算实验手册第一版-IBM版本.pdf](./assets/量子计算实验手册第一版-IBM版本.pdf)| [IBM量子平台](https://www.ibm.com/quantum) |
 | [量子计算实验手册第二版-本源量子-2024修订版.pdf](./assets/量子计算实验手册第二版-本源-2024修订版.pdf) | [本源量子平台](https://qcloud.originqc.com.cn/zh/computerServices/) | 
-| [量子计算实验手册第三版-腾讯-2025修订版.pdf](./assets/量子计算实验手册第三版-腾讯-2025修订版.pdf) | [腾讯量子云平台](https://quantum.tencent.com/cloud/?#qq) | 
 
 - 实验报告模板： [武汉大学实验报告(word)](./assets/实验报告书写模板.doc)， [武汉大学实验报告(latex)](./assets/武大实验报告模板（latex版）.zip)
 
