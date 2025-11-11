@@ -26,7 +26,7 @@ hide_table_of_contents: false
 />
 <figcaption style= {{textAlign: 'center', fontFamily: 'Calibri'}}>各实验分数</figcaption>
 
-- 实验主要使用Python，配合本源量子云平台或者IBM Qiskit等量子计算平台进行实验
+- 实验主要使用Python，配合腾讯量子云平台、本源量子云平台或者IBM Qiskit等量子计算平台进行实验
 - 共6个实验，最终取得分最高的三个实验成绩作为实验成绩，总分不超过30分
 - 提交代码和实验结果，打包交给助教
 
